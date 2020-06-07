@@ -9,17 +9,20 @@
 import UIKit
 
 class CalculateViewController: UIViewController {
-
+  
+  var bmiValue = "0.0"
+  
   @IBOutlet weak var heightLabel: UILabel!
   @IBOutlet weak var weightLabel: UILabel!
   @IBOutlet weak var heightSlider: UISlider!
   @IBOutlet weak var weightSlider: UISlider!
   
   override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
+    super.viewDidLoad()
+    
+    // Do any additional setup after loading the view.
+  }
+  
   @IBAction func heightSliderChanged(_ sender: UISlider) {
     print(String(format: "%.2f", sender.value)) // 2f -> 2 decimal places; (round(sender.value*100)/100) X Int(round(sender.value))
     
@@ -39,15 +42,17 @@ class CalculateViewController: UIViewController {
     let weight = weightSlider.value
     
     let bmi = weight / pow(height, 2)
-    print(bmi)
+    bmiValue = String(format: "%.1f", bmi)
     
-    //    initiate SecondViewController with its property - bmiValue
-    let secondVC = SecondViewController()
-    secondVC.bmiValue = String(format: "%.1f", bmi)
-    
-    //    current viewcontroller calls secondviewcontrollercurrent
-    self.present(secondVC, animated: true, completion: nil)
+    self.performSegue(withIdentifier: "goToResult", sender: self)
   }
-   
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "goToResult" {
+      let destinationViewController = segue.destination as! ResultViewController
+      destinationViewController.bmiValue = bmiValue
+    }
+  }
+  
 }
 
