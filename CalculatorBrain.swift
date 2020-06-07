@@ -10,7 +10,7 @@ import Foundation
 
 struct CalculatorBrain {
   
-  var bmi: Float = 0.0
+  var bmi: Float?
   
   //  count BMI value -> first step then passing into getBMIValue method
   mutating func calculateBMI(height: Float, weight: Float) {
@@ -19,7 +19,9 @@ struct CalculatorBrain {
   
   //  returning BMI as string into CalculateViewController
   func getBMIValue() -> String {
-    let bmiTo1DecimalPlace = String(format: "%.1f", bmi)
-    return bmiTo1DecimalPlace
+    //    using 'nil coalescing operator' for bmi optional
+      let bmiTo1DecimalPlace = String(format: "%.1f", bmi ?? 0.0)
+      return bmiTo1DecimalPlace
   }
+   
 }
