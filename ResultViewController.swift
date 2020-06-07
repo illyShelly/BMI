@@ -11,6 +11,8 @@ import UIKit
 class ResultViewController: UIViewController {
   
   var bmiValue: String?
+  var advice: String?
+  var color: UIColor? // to call property of calculatorBrain
   
   @IBOutlet weak var bmiLabel: UILabel!
   @IBOutlet weak var adviceLabel: UILabel!
@@ -19,6 +21,8 @@ class ResultViewController: UIViewController {
     super.viewDidLoad()
     
     bmiLabel.text = bmiValue
+    adviceLabel.text = advice // .text property is optional -> without ?
+    view.backgroundColor = color // property view -> refer to background color
     
   }
   

@@ -14,9 +14,9 @@
 		AD0B9F83230D61840065EFD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD0B9F82230D61840065EFD9 /* Assets.xcassets */; };
 		AD0B9F86230D61840065EFD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0B9F84230D61840065EFD9 /* LaunchScreen.storyboard */; };
 		AD64359A2312D0BC00E22B00 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD6435992312D0BC00E22B00 /* README.md */; };
+		FA4684B7248D4A3400B8C603 /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4684B6248D4A3400B8C603 /* BMI.swift */; };
 		FAE9C077248C1F5B003DA118 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE9C076248C1F5B003DA118 /* ResultViewController.swift */; };
 		FAE9C079248D2AC2003DA118 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE9C078248D2AC1003DA118 /* CalculatorBrain.swift */; };
-		FAE9C08E248D44F6003DA118 /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE9C08D248D44F6003DA118 /* BMI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		AD0B9F85230D61840065EFD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD0B9F87230D61840065EFD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD6435992312D0BC00E22B00 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FA4684B6248D4A3400B8C603 /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 		FAE9C076248C1F5B003DA118 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = SOURCE_ROOT; };
-		FAE9C078248D2AC1003DA118 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = SOURCE_ROOT; };
-		FAE9C08D248D44F6003DA118 /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BMI.swift; path = ../../../BMI.swift; sourceTree = "<group>"; };
+		FAE9C078248D2AC1003DA118 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalculatorBrain.swift; path = "BMI Calculator/Model/CalculatorBrain.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 			children = (
 				AD0B9F79230D61800065EFD9 /* AppDelegate.swift */,
 				AD0B9F7B230D61800065EFD9 /* SceneDelegate.swift */,
-				AD0B9F8F230D63EA0065EFD9 /* Models */,
+				FA4684B5248D49F200B8C603 /* Model */,
 				AD0B9F8E230D63E10065EFD9 /* Views */,
 				AD0B9F8D230D63D70065EFD9 /* Controllers */,
 				AD0B9F82230D61840065EFD9 /* Assets.xcassets */,
@@ -94,13 +94,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		AD0B9F8F230D63EA0065EFD9 /* Models */ = {
+		FA4684B5248D49F200B8C603 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				FAE9C078248D2AC1003DA118 /* CalculatorBrain.swift */,
-				FAE9C08D248D44F6003DA118 /* BMI.swift */,
+				FA4684B6248D4A3400B8C603 /* BMI.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +179,7 @@
 				AD0B9F7A230D61800065EFD9 /* AppDelegate.swift in Sources */,
 				AD0B9F7C230D61800065EFD9 /* SceneDelegate.swift in Sources */,
 				FAE9C079248D2AC2003DA118 /* CalculatorBrain.swift in Sources */,
-				FAE9C08E248D44F6003DA118 /* BMI.swift in Sources */,
+				FA4684B7248D4A3400B8C603 /* BMI.swift in Sources */,
 				FAE9C077248C1F5B003DA118 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
